@@ -12,5 +12,7 @@ Template.signUp.events({
       email: email,
       password: password
     });
+
+    Router.go('home');
   }
 });
