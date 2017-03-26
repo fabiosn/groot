@@ -2,6 +2,7 @@ import { Router } from 'meteor/iron:router';
 import '../imports/ui/body.js';
 import '../imports/ui/landingPageTemplate.js';
 import '../imports/ui/layout.js';
+import '../imports/ui/home.js';
 import '../imports/ui/auth/signUp.js';
 import '../imports/ui/auth/signIn.js';
 
@@ -18,7 +19,7 @@ Router.onBeforeAction(function () {
 
 Router.route('/', function () {
   this.layout('layout');
-  this.render('LandingPageTemplate');
+  this.render('home');
 }, {
   name: 'home'
 });
