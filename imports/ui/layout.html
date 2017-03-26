@@ -1,0 +1,26 @@
+<template name="layout">
+<nav>
+<div class="nav-wrapper blue-grey darken-4">
+  <a href="/" class="brand-logo center">GRoot</a>
+  <a href="#" data-activates="nav-bar" class="button-collapse right"><i class="material-icons">menu</i></a>
+  <ul class="right hide-on-med-and-down">
+    {{#if currentUser}}
+    <li><a href="#" class="sign-out">Sair</a></li>
+    {{else}}
+    <li><a href="/sign_up">Registrar</a></li>
+    <li><a href="/sign_in">Entrar</a></li>
+    {{/if}}
+  </ul>
+  <ul class="side-nav right" id="nav-bar">
+    {{#if currentUser}}
+    <li><a href="#" class="sign-out">Sair</a></li>
+    {{else}}
+    <li><a href="/sign_up">Registrar</a></li>
+    <li><a href="/sign_in">Entrar</a></li>
+    {{/if}}
+  </ul>
+</div>
+</nav>
+
+{{> yield}}
+</template>
